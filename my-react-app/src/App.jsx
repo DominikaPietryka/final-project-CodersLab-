@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
 import { Button } from 'primereact/button';
+import HookFormDoc from './components/newEntry';
 
 
 function App() {
@@ -17,8 +18,16 @@ function App() {
         </div>
       </div>
     </PrimeReactProvider>
+    <PrimeReactProvider>
+      <div className="app-container">
+          <HookFormDoc></HookFormDoc>
+      </div>
+    </PrimeReactProvider>
     </>
+
   )
 }
+
+
 
 export default App
