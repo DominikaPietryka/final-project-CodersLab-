@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-import { Button } from 'primereact/button';
+import { Button } from 'primereact/button'; 
 import HookFormDoc from './components/newEntry';
+import InlineDemo from './components/Calendar';
+
 
 
 function App() {
@@ -20,7 +22,12 @@ function App() {
     </PrimeReactProvider>
     <PrimeReactProvider>
       <div className="app-container">
-          <HookFormDoc></HookFormDoc>
+          <HookFormDoc className='newEntry'></HookFormDoc>
+      </div>
+    </PrimeReactProvider>
+    <PrimeReactProvider>
+      <div className="app-container">
+          <InlineDemo className='Calendar'></InlineDemo>
       </div>
     </PrimeReactProvider>
     </>
