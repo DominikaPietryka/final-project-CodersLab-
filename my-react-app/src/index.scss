@@ -1,0 +1,95 @@
+.app {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: baseline;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+
+  button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.newEntry,
+.calendar {
+  margin-top: 40px;
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .emotions button,
+  textarea,
+  .saveButton {
+    background-color: transparent;
+    border: 0px solid white;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    font-size: 1em;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: rgb(255, 255, 255);
+      color: black;
+    }
+  }
+
+  textarea {
+    border: 1.5px solid white;
+    width: 80%;
+    height: 100px;
+    border-radius: 20px;
+  }
+
+  .saveButton {
+    border: 2px solid white;
+  }
+}
+
+.calendar {
+  .entry {
+    border: 1px solid white;
+    width: 100%;
+    height: 50px;
+  }
+  .menuButton,
+  .backButton {
+    border: 0px solid white;
+    padding: 10px;
+  }
+  .p-calendar {
+    padding-bottom: 30px;
+  }
+  .p-datepicker-month,
+  .p-datepicker-year,
+  .p-datepicker-next,
+  .p-datepicker-prev {
+    padding: 8px;
+    border: 0px;
+  }
+}
