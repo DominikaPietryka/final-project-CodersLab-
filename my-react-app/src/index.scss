@@ -32,30 +32,32 @@
   }
 }
 
-.newEntry,
-.calendar {
+.newEntry {
   margin-top: 40px;
   h2 {
     font-size: 1.5em;
     margin-bottom: 20px;
   }
 
-  .emotions button,
-  textarea,
-  .saveButton {
-    background-color: transparent;
-    border: 0px solid white;
-    color: white;
-    border-radius: 30px;
-    padding: 10px;
-    font-size: 1em;
-    margin: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  .emotions {
+    button {
+      background-color: transparent;
+      border: 2px solid transparent; // Default border to maintain the button size
+      border-radius: 30px;
+      padding: 10px;
+      font-size: 1em;
+      margin: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
 
-    &:hover {
-      background-color: rgb(255, 255, 255);
-      color: black;
+      &.selected { // When button is selected
+        border: 2px dashed white; // Show dashed border for selected emotion
+      }
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        color: black;
+      }
     }
   }
 
@@ -64,10 +66,22 @@
     width: 80%;
     height: 100px;
     border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 
   .saveButton {
     border: 2px solid white;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
 }
 
@@ -76,15 +90,25 @@
     border: 1px solid white;
     width: 100%;
     height: 50px;
+    margin-bottom: 20px;
+    padding: 10px;
   }
+
   .menuButton,
   .backButton {
     border: 0px solid white;
     padding: 10px;
+    margin-top: 10px;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
+
   .p-calendar {
     padding-bottom: 30px;
   }
+
   .p-datepicker-month,
   .p-datepicker-year,
   .p-datepicker-next,

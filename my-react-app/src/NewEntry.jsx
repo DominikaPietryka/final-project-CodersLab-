@@ -18,17 +18,33 @@ function NewEntry({ setActiveComponent }) {
     <div className="newEntry">
       <h2>How are you?</h2>
       <div className="emotions">
-        <button onClick={() => setSelectedEmotion('happy')}>
-          <FontAwesomeIcon style={{color: 'green', fontSize: '30px'}} icon={faSmile} />
+      <button
+          className={selectedEmotion === 'happy' ? 'selected' : ''}
+          onClick={() => setSelectedEmotion('happy')}>
+          <FontAwesomeIcon
+            style={{ color: 'green', fontSize: '30px' }}
+            icon={faSmile}/>
         </button>
-        <button onClick={() => setSelectedEmotion('neutral')}>
-          <FontAwesomeIcon style={{color: 'yellow',fontSize: '30px'}}icon={faMeh} />
+        <button
+          className={selectedEmotion === 'neutral' ? 'selected' : ''}
+          onClick={() => setSelectedEmotion('neutral')}>
+          <FontAwesomeIcon
+            style={{ color: 'yellow', fontSize: '30px' }}
+            icon={faMeh}/>
         </button>
-        <button onClick={() => setSelectedEmotion('sad')}>
-          <FontAwesomeIcon style={{color: 'blue',fontSize: '30px'}}icon={faFrown} />
+        <button
+          className={selectedEmotion === 'sad' ? 'selected' : ''}
+          onClick={() => setSelectedEmotion('sad')}>
+          <FontAwesomeIcon
+            style={{ color: 'blue', fontSize: '30px' }}
+            icon={faFrown}/>
         </button>
-        <button onClick={() => setSelectedEmotion('sad')}>
-          <FontAwesomeIcon style={{color: 'darkred',fontSize: '30px'}}icon={faAngry} />
+        <button
+          className={selectedEmotion === 'angry' ? 'selected' : ''}
+          onClick={() => setSelectedEmotion('angry')}>
+          <FontAwesomeIcon
+            style={{ color: 'darkred', fontSize: '30px' }}
+            icon={faAngry}/>
         </button>
       </div>
       <textarea
